@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Login Example</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url(https://images.unsplash.com/photo-1547480053-7d174f67b557?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dG8lMjBkbyUyMGxpc3R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-primary justify-content-between">
+        <a class="navbar-brand" href="/">Time Spent</a>
+        <a class="btn btn-outline-success" style="background-color: white; color: blue;" href="/login/"
+            type="button">Login</a>
+    </nav>
+
+
+    <div class="container" style="width :  400px">
+        <div class="wrapper" style="margin: auto; width: 350px;">
+            <form action="/signupd/" method="post" name="Login_Form" class="form-signin">
+                <h3 class="form-signin-heading" style="margin-top: 30px;">Welcome! Please Sign Up</h3>
+                <div class="f" style="width: 350px; margin-top: 20px; margin: auto;">
+                    <input type="text" class="form-control" name="name" placeholder="Name" required=""
+                    autofocus="" style="margin-top: 20px;" />
+                    <input type="text" class="form-control" name="email" placeholder="Email Address" required=""
+                        autofocus="" style="margin-top: 20px;" />
+                    <input type="password" class="form-control" name="password" placeholder="Password" required=""
+                        style="margin-top: 20px;" />
+
+                    <button class="btn btn-lg btn-primary btn-block" name="Submit" value="SignUp" type="Submit"
+                        style="margin-top: 20px;">Sign Up</button>
+                    <h6 style="margin-top: 20px;">Already SignUp ,Login!! </h6> <a class="btn btn-outline-success"
+                        style="background-color: white; color: blue;" href="/login/" type="button">Login</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

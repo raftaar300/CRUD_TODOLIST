@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    
+   
+       <link rel="stylesheet" href="style.css">
+      
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+       <link rel="stylesheet" href="css/style.css">
+      
+</head>
+<body>
+    <nav  class="navbar navbar-dark bg-primary justify-content-between">
+        <a class="navbar-brand" href="/" >Time Spent</a>
+        <a href="/logout/" class="btn btn-outline-success" style = "background-color: white; color: blue;">LogOut</a>
+      </nav>
+
+    <main id="site-main">
+        
+        <div class="container" style="width :  400px">
+            <div class="wrapper" style="margin: auto; width: 350px;">
+                <form action="/class/<%=classs%>/<%=subject%>/<%=chaptername%>/editchap" method="post" name="Login_Form" class="form-signin">
+                    <h3 class="form-signin-heading" style="margin-top: 30px;">Edit Chapter's Name</h3>
+                  <div class="f"  style="width: 350px; margin-top: 20px; margin: auto;">
+                    <input type="text" class="form-control" name="name" placeholder="Chapter Name" required="" autofocus="" style="margin-top: 20px;"/>
+                    
+    
+                    <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" style="margin-top: 20px;" >Submit</button>
+                   
+               
+                </div>
+                
+                </form>
+            </div>
+        </div>
+    </main>
+
+<%- include('include/_footer') %>

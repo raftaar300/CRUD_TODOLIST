@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    
+        <header id="header">
+            <nav  class="navbar navbar-dark bg-primary justify-content-between">
+                <a class="navbar-brand" href="/" >Time Spent</a>
+                <a href="/logout/" class="btn btn-outline-success" style = "background-color: white; color: blue;">LogOut</a>
+              </nav>
+        </header>
+
+
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter" style="margin-top: 50px;">
+               <a href="/"><i class="fas fa-angle-double-left"></i> All Tasks</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Task</h2>
+            <span  style="color: blue;">Use the below form to Update an account</span>
+        </div>
+
+    
+ <form action="/edited/"  method="post" id="update_user", role="form">
+
+    <input type="hidden" name="id" value="<%= rec._id%>">
+    
+
+        <div class="form-group" style="width: 500px; margin:auto;"> 
+   
+            <label for="gender" class="text-light">Task</label>
+            <div class="radio inline">
+                <input type="text"  name="gender" placeholder="Enter New Task" >
+        </div>
+           <input type="submit" name="submit" value="submit" class="btn text-dark update" style="background-color: rgb(0, 119, 255); margin-top: 30px;" formmethod="post">
+          
+        </div>
+
+</form>
+       
+    </div>
+</main>
+
+<%- include('include/_footer') %>

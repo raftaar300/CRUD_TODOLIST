@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-primary justify-content-between">
+        <a class="navbar-brand" href="/">Time Spent</a>
+        <div>
+            <a href="/class/<%= clas%>/<%=subject%>/newchap" class="btn btn-outline-success"
+                style="background-color: white; color: blue;">Add New Chapter</a>
+            <a href="/logout/" class="btn btn-outline-success" style="background-color: white; color: blue;">LogOut</a>
+        </div>
+    </nav>
+
+    <main id="site-main">
+
+        <div class="container" style="margin-top: 2%;">
+
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+
+                        <th>Chapter Name</th>
+                        <th>Action</th>
+                        <th>Time Spent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%if(typeof chapters !=="undefined" && chapters.length> 0){%>
+                        <% for(var i=0; i < chapters.length; i++) { %>
+
+                            <tr>
+
+                                <td><a href="/class/<%=clas%>/<%=subject%>/<%=chapters[i].chaptername%>/topics">
+                                        <%=chapters[i].chaptername%>
+                                    </a></td>
+                                    <td>
+                                        <a href="/updatechap/<%=clas%>/<%=subject%>/<%=chapters[i].chaptername%>/" class="btn border-shadow update">
+                                            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                        </a>
+                                        <a href="/class/<%=clas%>/<%=subject%>/<%=chapters[i].chaptername%>/deletechap/" class="btn border-shadow delete" >
+                                            <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                        </a>
+                                    </td>
+                                <td>
+                                    
+                                    <span><%=counts[i]%></span>
+                                </td>
+
+                            </tr>
+                            <% }}else{%>
+
+                                <tr>
+
+                                    <td>No Chapters Added</td>
+
+                                    <td>
+                                        <a href="/class/<%=clas%>/<%=subject%>/newchap" class="btn btn-outline-success"
+                                            style="background-color: white; color: blue;">Add New Chapter</a>
+
+                                    </td>
+
+                                </tr>
+                                <%}%>
+                </tbody>
+            </table>
+
+
+
+        </div>
+
+
+    </main>
+
+    <%- include('include/_footer') %>
